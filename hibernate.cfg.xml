@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+       "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <!-- SqlServer 数据库访问 -->
+		<property name="connection.url">jdbc:sqlserver://10.197.2.65:2433;databasename=PmcnRisData20180611</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password">%rissodsoftadmin%!</property>
+		
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+	
+		<property name="current_session_context_class">thread</property>
+        <!--是否在Test控制台显示执行的sql语句-->
+        <property name="show_sql">true</property>
+	
+		<mapping resource="com/ris/pojo/Sales.hbm.xml"></mapping>
+	
+	</session-factory>
+</hibernate-configuration>
