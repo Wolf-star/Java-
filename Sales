@@ -1,0 +1,84 @@
+package com.ris.pojo;
+
+import java.io.Serializable;
+
+
+public class Sales implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer _id;
+	private Integer _ownertype;
+	private Integer _ownerid;
+	private Integer _tenantid;
+	private String xsrq;
+	private String mdbh;
+	private Integer sl;
+	private String spxh;
+	private double je;
+	private String gxsj;
+	
+	public String getGxsj() {
+		return gxsj;
+	}
+	public void setGxsj(String gxsj) {
+		this.gxsj = gxsj;
+	}
+	public Integer get_id() {
+		return _id;
+	}
+	public void set_id(Integer _id) {
+		this._id = _id;
+	}
+	public Integer get_ownertype() {
+		return _ownertype;
+	}
+	public void set_ownertype(Integer _ownertype) {
+		this._ownertype = _ownertype;
+	}
+	public Integer get_ownerid() {
+		return _ownerid;
+	}
+	public void set_ownerid(Integer _ownerid) {
+		this._ownerid = _ownerid;
+	}
+	public Integer get_tenantid() {
+		return _tenantid;
+	}
+	public void set_tenantid(Integer _tenantid) {
+		this._tenantid = _tenantid;
+	}
+	public String getXsrq() {
+		return xsrq;
+	}
+	public void setXsrq(String xsrq) {
+		this.xsrq = xsrq;
+	}
+	public String getMdbh() {
+		return mdbh;
+	}
+	public void setMdbh(String mdbh) {
+		this.mdbh = mdbh;
+	}
+	public Integer getSl() {
+		return sl;
+	}
+	public void setSl(Integer sl) {
+		this.sl = sl;
+	}
+	public String getSpxh() {
+		return spxh;
+	}
+	public void setSpxh(String spxh) {
+		this.spxh = spxh;
+	}
+	public double getJe() {
+		return je;
+	}
+	public void setJe(double je) {
+		this.je = je;
+	}
+	
+}
