@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping package="com.ris.pojo">
+ 	<class name="Sales" table="_BK_Acut_Sas_sumH_ID_1229">
+ 		<id name="_id" column="_id">
+ 			<generator class="increment"></generator>
+ 		</id>
+ 		<property name="_ownertype"></property>
+ 		<property name="_ownerid"></property>
+ 		<property name="_tenantid"></property>
+ 		<property name="xsrq"></property>
+ 		<property name="mdbh"></property>
+ 		<property name="sl"></property>
+ 		<property name="spxh"></property>
+ 		<property name="je"></property>
+ 		<property name="gxsj"></property>
+ 	</class>
+ </hibernate-mapping>
