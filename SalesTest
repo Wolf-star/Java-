@@ -1,0 +1,58 @@
+package com.ris.test;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.junit.jupiter.api.Test;
+
+import com.ris.pojo.Sales;
+
+class SalesTest {
+
+	@Test
+	void test() {
+		Configuration conf=null;
+		SessionFactory sf =null;
+		Session session =null;
+		Transaction ts=null;
+		/**
+		 * 插入数据
+		 */
+		/*
+		Sales s=new Sales();
+		s.set_ownerid(0);
+		s.set_ownertype(0);
+		s.set_tenantid(0);
+		s.setMdbh("77820092");
+		s.setSpxh("NR-ED50CPP-S");
+		s.setSl(1);
+		s.setJe(10005);
+		s.setXsrq(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+		s.setGxsj(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+		*/
+		try {
+		conf=new Configuration().configure();
+		sf=conf.buildSessionFactory();
+		session=sf.getCurrentSession();
+		ts=session.beginTransaction();
+		/**
+		 * 反射机制创建类，通过id获取数据
+		 */
+		Sales sg=(Sales)session.get(Sales.class, 8024225);
+		System.out.println(sg.getMdbh()+"----------"+sg.getSpxh()+"----------"+sg.getSl()+"----------"+sg.getJe()+"----------"+sg.getXsrq());
+		//session.save(s);
+		ts.commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+			ts.rollback();
+		}finally {
+			session.close();
+		}
+		
+	}
+
+}
